@@ -1,0 +1,95 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ClassStats",
+"language": "GDScript",
+"path": "res://ClassStats.gd"
+} ]
+_global_script_class_icons={
+"ClassStats": ""
+}
+
+[application]
+
+config/name="Godot-NFT-Viewer"
+config/description="An NFT viewer that queries NFT contracts and displays metadata, using Nethereum, the C# Ethereum library.
+This project is a port of @BhaskarDutta2209's NFT-Gallery project (https://github.com/BhaskarDutta2209/NFT-Gallery) from Unity to Godot.
+*See his Code walkthrough here: https://learn.figment.io/tutorials/building-a-3d-art-gallery-using-unity3d-and-nethereum#writing-scripts-to-interact-with-the-blockchain
+
+This Godot implementation of the NFT Viewer has been implemented by @arigbs / @DADA_universe.
+
+The Nethereum integration in Godot takes off from the  \"GoDot Pong with C# with Nethereum Integration\" example shared by @juanfranblanco : https://github.com/Nethereum/GoDot-Example
+
+The integration example includes the simple Pong game GoDot demo and the full code and assets for the entire integration have been included here. This project is shared to help with faster onboarding of  developers seeking to interact with Ethereum through Godot. Further adaptations are most welcome.
+
+Check this repository for possible updates to the Godot NFT Viewer project: 
+
+"
+run/main_scene="pong.tscn"
+boot_splash/image="res://logo.png"
+config/icon="res://icon.png"
+
+[autoload]
+
+GlobalVariables="*res://globalVariables.cs"
+
+[display]
+
+window/size/width=720
+window/size/height=420
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[gdnative]
+
+singletons=[  ]
+
+[input]
+
+left_move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+left_move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+right_move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+right_move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":1,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+viewport/default_clear_color=Color( 0, 0, 0, 1 )

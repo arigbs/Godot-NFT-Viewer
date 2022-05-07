@@ -1,0 +1,370 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Logic/Paddle.cs" type="Script" id=1]
+[ext_resource path="res://paddle.png" type="Texture" id=2]
+[ext_resource path="res://Logic/Main.cs" type="Script" id=3]
+[ext_resource path="res://Logic/Ball.cs" type="Script" id=4]
+[ext_resource path="res://ball.png" type="Texture" id=5]
+[ext_resource path="res://separator.png" type="Texture" id=6]
+[ext_resource path="res://Logic/Wall.cs" type="Script" id=7]
+[ext_resource path="res://Logic/CeilingFloor.cs" type="Script" id=8]
+[ext_resource path="res://GalleryScripts/GetArtwork.cs" type="Script" id=10]
+[ext_resource path="res://GalleryScripts/ArtWorkSpawner.cs" type="Script" id=11]
+[ext_resource path="res://fonts/Viga-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://panels_theme.tres" type="Theme" id=13]
+[ext_resource path="res://fonts/LuckiestGuy-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://pong_icon.png" type="Texture" id=15]
+[ext_resource path="res://icon.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 215 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 390.25, 10 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=13]
+extra_spacing_top = 8
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 11
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 10
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 9
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 9
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 9
+font_data = ExtResource( 12 )
+
+[node name="Pong" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 720.0
+margin_bottom = 420.0
+color = Color( 0.141176, 0.152941, 0.164706, 1 )
+
+[node name="Left" type="Area2D" parent="."]
+modulate = Color( 0, 1, 1, 1 )
+position = Vector2( 70.6285, 187.594 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Left"]
+texture = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="Left"]
+shape = SubResource( 1 )
+
+[node name="Right" type="Area2D" parent="."]
+modulate = Color( 1, 0, 1, 1 )
+position = Vector2( 563.815, 188.919 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Right"]
+texture = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="Right"]
+shape = SubResource( 1 )
+
+[node name="Ball" type="Area2D" parent="."]
+position = Vector2( 322.842, 191.124 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+texture = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 2 )
+
+[node name="Ball2" type="Area2D" parent="."]
+position = Vector2( 320.5, 191.124 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball2"]
+texture = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ball2"]
+shape = SubResource( 2 )
+
+[node name="Ball3" type="Area2D" parent="."]
+position = Vector2( 320.5, 191.124 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball3"]
+texture = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ball3"]
+shape = SubResource( 2 )
+
+[node name="Ball4" type="Area2D" parent="."]
+position = Vector2( 320.5, 191.124 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball4"]
+texture = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ball4"]
+shape = SubResource( 2 )
+
+[node name="Ball5" type="Area2D" parent="."]
+position = Vector2( 320.5, 191.124 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball5"]
+texture = ExtResource( 5 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ball5"]
+shape = SubResource( 2 )
+
+[node name="Separator" type="Sprite" parent="."]
+position = Vector2( 320, 200 )
+texture = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="LeftWall" type="Area2D" parent="."]
+position = Vector2( -10, 200 )
+script = ExtResource( 7 )
+
+[node name="Collision" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2( 0, 10 )
+shape = SubResource( 3 )
+
+[node name="RightWall" type="Area2D" parent="."]
+position = Vector2( 650, 200 )
+script = ExtResource( 7 )
+
+[node name="Collision" type="CollisionShape2D" parent="RightWall"]
+position = Vector2( 80, 5 )
+shape = SubResource( 3 )
+
+[node name="Ceiling" type="Area2D" parent="."]
+position = Vector2( 320, -10 )
+script = ExtResource( 8 )
+
+[node name="Collision" type="CollisionShape2D" parent="Ceiling"]
+position = Vector2( 40.5, 0 )
+shape = SubResource( 4 )
+
+[node name="Floor" type="Area2D" parent="."]
+position = Vector2( 320, 410 )
+script = ExtResource( 8 )
+
+[node name="Collision" type="CollisionShape2D" parent="Floor"]
+position = Vector2( 39, 20 )
+shape = SubResource( 4 )
+
+[node name="WalletCheckPanel" type="Panel" parent="."]
+margin_left = 27.0
+margin_top = 98.0
+margin_right = 67.0
+margin_bottom = 138.0
+
+[node name="lblBlockNumber" type="Label" parent="WalletCheckPanel" groups=["NFT Nodes"]]
+margin_right = 118.0
+margin_bottom = 23.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 5 )
+text = "Block Number:"
+
+[node name="AccNumText" type="LineEdit" parent="WalletCheckPanel" groups=["NFT Nodes"]]
+margin_top = 21.0
+margin_right = 173.0
+margin_bottom = 46.0
+theme = ExtResource( 13 )
+custom_fonts/font = SubResource( 12 )
+placeholder_text = "Enter Wallet Address"
+
+[node name="lblAccNumber" type="Label" parent="WalletCheckPanel" groups=["NFT Nodes"]]
+margin_top = 52.0
+margin_right = 118.0
+margin_bottom = 75.0
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 5 )
+text = "Wallet Balance:"
+
+[node name="contactLinkButton" type="LinkButton" parent="WalletCheckPanel"]
+margin_left = 556.0
+margin_top = -89.0
+margin_right = 673.0
+margin_bottom = -75.0
+custom_fonts/font = SubResource( 15 )
+text = "About This Project"
+
+[node name="BlockNumberTimer" type="Timer" parent="." groups=["NFT Nodes"]]
+
+[node name="Player" type="Spatial" parent="." groups=["Player"]]
+
+[node name="HTTPRequest_Node2D2" type="Node2D" parent="."]
+visible = false
+
+[node name="pongCheckButton" type="CheckButton" parent="."]
+margin_left = 25.0
+margin_top = 60.0
+margin_right = 200.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.872, 0.872 )
+custom_fonts/font = SubResource( 16 )
+text = "Show Pong"
+icon = ExtResource( 15 )
+
+[node name="RestartPongButton" type="Button" parent="."]
+visible = false
+margin_left = 87.0
+margin_top = 96.0
+margin_right = 158.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 14 )
+text = "Restart Pong"
+
+[node name="DataNode" type="Node" parent="."]
+script = ExtResource( 10 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="DataNode"]
+
+[node name="viewNFTButton" type="Button" parent="DataNode" groups=["NFT Nodes"]]
+margin_left = 30.0
+margin_top = 27.0
+margin_right = 155.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 13 )
+text = "View NFT"
+icon = ExtResource( 16 )
+expand_icon = true
+
+[node name="NFTDetailsPanel" type="Panel" parent="DataNode" groups=["NFT Nodes"]]
+margin_left = 234.0
+margin_top = 28.0
+margin_right = 689.0
+margin_bottom = 342.0
+
+[node name="DetailsLabel" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -201.0
+margin_top = 316.0
+margin_right = -135.0
+margin_bottom = 336.0
+custom_fonts/font = SubResource( 6 )
+text = "NFT DETAILS"
+
+[node name="TitleLabel" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -201.0
+margin_top = 331.0
+margin_right = -161.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 6 )
+text = "Title:"
+
+[node name="DescLabel" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -201.0
+margin_top = 347.0
+margin_right = -123.0
+margin_bottom = 367.0
+custom_fonts/font = SubResource( 7 )
+text = "Description:"
+
+[node name="LinkLabel" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -201.0
+margin_top = 362.0
+margin_right = -123.0
+margin_bottom = 382.0
+custom_fonts/font = SubResource( 8 )
+text = "Link:"
+
+[node name="TitleData" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -139.0
+margin_top = 331.0
+margin_right = -79.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 9 )
+text = "..............."
+
+[node name="DescData" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -139.0
+margin_top = 347.0
+margin_right = -61.0
+margin_bottom = 367.0
+custom_fonts/font = SubResource( 10 )
+text = "................"
+
+[node name="LinkData" type="Label" parent="DataNode/NFTDetailsPanel" groups=["NFT Nodes"]]
+margin_left = -139.0
+margin_top = 362.0
+margin_right = -61.0
+margin_bottom = 382.0
+custom_fonts/font = SubResource( 11 )
+text = "................"
+
+[node name="ArtworkPictureFrame" type="TextureRect" parent="DataNode" groups=["NFT Nodes"]]
+margin_left = 234.0
+margin_top = 28.0
+margin_right = 689.0
+margin_bottom = 342.0
+
+[node name="ArtworkSpawner" type="Node2D" parent="DataNode"]
+script = ExtResource( 11 )
+
+[node name="SpawnPoint1" type="Node2D" parent="DataNode/ArtworkSpawner"]
+
+[node name="SpawnPoint2" type="Node2D" parent="DataNode/ArtworkSpawner"]
+position = Vector2( 1, 0 )
+
+[node name="SpawnPoint3" type="Node2D" parent="DataNode/ArtworkSpawner"]
+position = Vector2( 2, 0 )
+
+[node name="SpawnPoint4" type="Node2D" parent="DataNode/ArtworkSpawner"]
+position = Vector2( 3, 0 )
+
+[node name="SpawnPoint5" type="Node2D" parent="DataNode/ArtworkSpawner"]
+position = Vector2( 4, 0 )
+
+[node name="SpawnPoint" type="Node2D" parent="DataNode"]
+
+[connection signal="area_entered" from="Left" to="Left" method="OnAreaEntered"]
+[connection signal="area_entered" from="Right" to="Right" method="OnAreaEntered"]
+[connection signal="area_entered" from="LeftWall" to="LeftWall" method="OnWallAreaEntered"]
+[connection signal="area_entered" from="RightWall" to="RightWall" method="OnWallAreaEntered"]
+[connection signal="area_entered" from="Ceiling" to="Ceiling" method="OnAreaEntered"]
+[connection signal="area_entered" from="Floor" to="Floor" method="OnAreaEntered"]
+[connection signal="pressed" from="WalletCheckPanel/contactLinkButton" to="." method="_on_contactLinkButton_pressed"]
+[connection signal="timeout" from="BlockNumberTimer" to="." method="OnBlockNumberTimerTimeout"]
+[connection signal="pressed" from="RestartPongButton" to="." method="_on_RestartPongButton_pressed"]

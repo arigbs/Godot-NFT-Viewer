@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godot-NFT-Viewer", "Godot-NFT-Viewer.csproj", "{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{EBA5981B-C37E-48C5-A3B6-4390D9834F9A}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE7CDDD7-1445-4602-B7B4-9F9453C8CFBD}
+	EndGlobalSection
+EndGlobal

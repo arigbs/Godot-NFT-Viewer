@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://ClassStats.gd" type="Script" id=1]
+
+[sub_resource type="Image" id=1]
+data = {
+"data": PoolByteArray(  ),
+"format": "Lum8",
+"height": 0,
+"mipmaps": false,
+"width": 0
+}
+
+[resource]
+script = ExtResource( 1 )
+type = "Kight"
+health = 175
+strength = 100
+profile = SubResource( 1 )
